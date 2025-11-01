@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #f6f7fb; }
+.app { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+.sidebar { background: #111827; color: #fff; padding: 20px; }
+.sidebar h2 { margin-top: 0; }
+.sidebar a { display: block; color: #c7d2fe; text-decoration: none; padding: 8px 0; }
+.sidebar a.active { color: #fff; font-weight: 700; }
+.content { padding: 24px; }
+.card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 8px 12px; border-bottom: 1px solid #eee; text-align: left; }
+.btn { padding: 8px 12px; border: none; border-radius: 8px; background: #4f46e5; color: white; cursor: pointer; }
+.btn.secondary { background: #6b7280; }
+.input, .select { padding: 8px; border: 1px solid #ddd; border-radius: 8px; width: 100%; }
+.row { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.badge { padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+.badge.low { background: #fee2e2; color: #991b1b; }
+.flex { display: flex; gap: 8px; align-items: center; }

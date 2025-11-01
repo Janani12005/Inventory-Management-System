@@ -1,0 +1,15 @@
+{
+  "name": "inventory-management-system-root",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3"
+  },
+  "scripts": {
+    "start": "npm run prepare && concurrently \"npm:backend\" \"npm:frontend\" --names backend,frontend --prefix \"[{name}]\"",
+    "prepare": "node -e \"process.exit(0)\"",
+    "backend": "cd backend && npm install --no-audit --no-fund && npm install sqlite3 --save --no-audit --no-fund && (if exist .env (echo .env found) else copy .env.example .env) && cross-env USE_SQLITE=true node src/server.js",
+    "frontend": "cd frontend && npm install --no-audit --no-fund && node -e \"require('fs').writeFileSync('.env', 'VITE_API=http://localhost:4000/api')\" && npm run dev"
+  }
+}
